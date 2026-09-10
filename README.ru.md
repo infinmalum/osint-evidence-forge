@@ -37,18 +37,15 @@ OSINT Evidence Forge — это навык для [Hermes Agent](https://hermes-
 npx skills add infinmalum/osint-evidence-forge
 ```
 
-### Hermes Agent
+### Hermes Agent (рекомендуется)
 
-```bash
-hermes skills tap add infinmalum/osint-evidence-forge
-hermes skills install infinmalum/osint-evidence-forge
-```
-
-Или установите напрямую по URL SKILL.md:
+Сейчас репозиторий использует автономную раскладку навыка: `SKILL.md` находится в корне репозитория. Установите его напрямую по URL:
 
 ```bash
 hermes skills install https://raw.githubusercontent.com/infinmalum/osint-evidence-forge/main/SKILL.md
 ```
+
+Установка через Hermes tap требует размещения навыка в `skills/<skill-name>/`. Если репозиторий позже будет перестроен в такую раскладку, можно будет использовать tap.
 
 ### Другие агенты (Cursor и рантаймы, совместимые с SKILL.md)
 

@@ -49,20 +49,15 @@ The skill is built around ten **hard invariants**, including:
 npx skills add infinmalum/osint-evidence-forge
 ```
 
-### Hermes Agent
+### Hermes Agent (recommended)
 
-Add this repository as a skill tap, then install:
-
-```bash
-hermes skills tap add infinmalum/osint-evidence-forge
-hermes skills install infinmalum/osint-evidence-forge
-```
-
-Or install directly from the SKILL.md URL:
+This repository currently uses the standalone skill layout, with `SKILL.md` at the repository root. Install it directly from its URL:
 
 ```bash
 hermes skills install https://raw.githubusercontent.com/infinmalum/osint-evidence-forge/main/SKILL.md
 ```
+
+Hermes tap installation expects skills under `skills/<skill-name>/`. If this repository is later restructured into that tap layout, the tap method may be used.
 
 ### Other agents (Cursor and SKILL.md-compatible runtimes)
 
