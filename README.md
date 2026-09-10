@@ -43,15 +43,28 @@ The skill is built around ten **hard invariants**, including:
 
 ## Installation
 
-### Hermes Agent
+### skills.sh (works with Claude Code and 40+ agents)
 
 ```bash
-hermes skills install <repo-url-or-path>
+npx skills add infinmalum/osint-evidence-forge
 ```
 
-Or clone directly into `~/.hermes/skills/research/osint-evidence-forge/`.
+### Hermes Agent
 
-### Other agents (Claude Code, Cursor, and SKILL.md-compatible runtimes)
+Add this repository as a skill tap, then install:
+
+```bash
+hermes skills tap add infinmalum/osint-evidence-forge
+hermes skills install infinmalum/osint-evidence-forge
+```
+
+Or install directly from the SKILL.md URL:
+
+```bash
+hermes skills install https://raw.githubusercontent.com/infinmalum/osint-evidence-forge/main/SKILL.md
+```
+
+### Other agents (Cursor and SKILL.md-compatible runtimes)
 
 The skill follows the standard `SKILL.md` + `references/` agent-skill layout. Point your runtime's skill directory at this repository, or copy `SKILL.md` and `references/` into its skill folder. No code execution is required — the skill is procedural documentation the agent loads as context.
 

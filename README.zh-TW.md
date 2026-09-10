@@ -31,15 +31,26 @@ OSINT Evidence Forge 是一個 [Hermes Agent](https://hermes-agent.nousresearch.
 
 ## 安裝
 
+### skills.sh（支援 Claude Code 及 40+ 種智能體）
+
+```bash
+npx skills add infinmalum/osint-evidence-forge
+```
+
 ### Hermes Agent
 
 ```bash
-hermes skills install <倉庫地址或路徑>
+hermes skills tap add infinmalum/osint-evidence-forge
+hermes skills install infinmalum/osint-evidence-forge
 ```
 
-或直接克隆到 `~/.hermes/skills/research/osint-evidence-forge/`。
+或直接從 SKILL.md URL 安裝：
 
-### 其他智能體（Claude Code、Cursor 及相容 SKILL.md 的執行環境）
+```bash
+hermes skills install https://raw.githubusercontent.com/infinmalum/osint-evidence-forge/main/SKILL.md
+```
+
+### 其他智能體（Cursor 及相容 SKILL.md 的執行環境）
 
 本技能採用標準 `SKILL.md` + `references/` 佈局，無需執行程式碼。將本倉庫指向你的執行環境技能目錄，或把 `SKILL.md` 和 `references/` 複製進其技能資料夾即可。
 

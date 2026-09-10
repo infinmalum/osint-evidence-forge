@@ -31,15 +31,26 @@ OSINT Evidence Forge — это навык для [Hermes Agent](https://hermes-
 
 ## Установка
 
+### skills.sh (работает с Claude Code и 40+ агентами)
+
+```bash
+npx skills add infinmalum/osint-evidence-forge
+```
+
 ### Hermes Agent
 
 ```bash
-hermes skills install <URL-репозитория-или-путь>
+hermes skills tap add infinmalum/osint-evidence-forge
+hermes skills install infinmalum/osint-evidence-forge
 ```
 
-Или клонируйте прямо в `~/.hermes/skills/research/osint-evidence-forge/`.
+Или установите напрямую по URL SKILL.md:
 
-### Другие агенты (Claude Code, Cursor и рантаймы, совместимые с SKILL.md)
+```bash
+hermes skills install https://raw.githubusercontent.com/infinmalum/osint-evidence-forge/main/SKILL.md
+```
+
+### Другие агенты (Cursor и рантаймы, совместимые с SKILL.md)
 
 Навык использует стандартную раскладку `SKILL.md` + `references/` и не требует исполнения кода. Укажите репозиторий в каталоге навыков вашего рантайма или скопируйте `SKILL.md` и `references/` в его папку навыков.
 
